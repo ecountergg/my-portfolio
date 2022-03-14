@@ -1,3 +1,11 @@
 {
-  "src/**/*.+(js,jsx,ts,tsx,json,css,scss,md)": ["eslint"],
+  "assets/**/*.+(css,scss)": [
+    "eslint"
+  ],
+  "components/**/*.+(vue,scss)": [
+    "eslint"
+  ],
+  "composables/*.+(ts)": [
+    "eslint"
+  ]
 }

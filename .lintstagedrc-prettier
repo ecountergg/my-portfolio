@@ -1,5 +1,11 @@
 {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-        "prettier --write"
-    ]
+  "assets/**/*.+(css,scss)": [
+    "prettier --write"
+  ],
+  "components/**/*.+(vue,scss)": [
+    "prettier --write"
+  ],
+  "composables/*.+(ts)": [
+    "prettier --write"
+  ]
 }
