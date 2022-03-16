@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
-    configPath: "tailwind.config.ts",
+    configPath: "tailwind.config.js",
     exposeConfig: false,
     config: {},
     injectPosition: 0,
@@ -25,5 +25,14 @@ export default defineNuxtConfig({
   env: {
     baseUrl: process.env.BASE_URL || "http://localhost:3000",
   },
-  components: [{ path: "~/components/atoms/", prefix: "A" }],
+  components: [
+    {
+      path: "~/components/atoms/",
+      prefix: "A",
+    },
+    {
+      path: "~/components/molecules/",
+      prefix: "M",
+    },
+  ],
 });

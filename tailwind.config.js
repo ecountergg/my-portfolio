@@ -11,14 +11,12 @@ module.exports = {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
-    extend: {
-      colors: {
-        primary: "#7D5A50",
-        secondary: "#B4846C",
-        tertiary: "#E5B299",
-        quaternary: "#FCDEC0",
-        white: "#ffffff",
-      },
+    colors: {
+      primary: "#7D5A50",
+      secondary: "#B4846C",
+      tertiary: "#E5B299",
+      quaternary: "#FCDEC0",
+      white: "#ffffff",
     },
   },
 };

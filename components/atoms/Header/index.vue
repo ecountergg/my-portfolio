@@ -1,5 +1,7 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-secondary p-6">
+  <nav
+    class="flex items-center justify-between flex-wrap bg-primary lg:bg-quaternary p-6"
+  >
     <div class="flex items-center flex-no-shrink mr-6">
       <svg
         class="h-8 w-8 mr-2"
@@ -15,12 +17,12 @@
     </div>
     <div class="block lg:hidden">
       <button
-        class="flex items-center px-3 py-2 border rounded text-white"
+        class="flex items-center px-3 py-2 border rounded text-white lg:text-primary"
         @click="isShowMenu = !isShowMenu"
       >
         <svg
           viewBox="0 0 100 80"
-          class="h-3 w-3 text-white"
+          class="h-3 w-3 text-white lg:text-primary"
           fill="currentColor"
         >
           <rect width="100" height="15"></rect>
@@ -33,24 +35,14 @@
       v-if="!isShowMenu"
       class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
     >
-      <div class="font-medium text-white lg:flex-grow">
+      <div class="font-medium text-white lg:text-primary lg:flex-grow">
         <a
-          href="#responsive-header"
+          v-for="(header, index) in Headers"
+          :key="`header-${index}`"
+          :href="header.href"
           class="block lg:inline-block mt-4 lg:mt-0 mr:0 lg:mr-4 font-semibold"
         >
-          Home
-        </a>
-        <a
-          href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 mr-4 font-semibold"
-        >
-          Portfolio
-        </a>
-        <a
-          href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 font-semibold"
-        >
-          About
+          {{ header.label }}
         </a>
       </div>
     </div>
@@ -61,6 +53,9 @@ import { defineComponent, ref, onMounted } from "vue";
 
 // Composable
 import { useIsMobile } from "~/composables/is-mobile";
+
+// Consts
+import { Headers } from "~/consts/headers";
 
 export default defineComponent({
   name: "AHeader",
@@ -74,6 +69,7 @@ export default defineComponent({
     });
 
     return {
+      Headers,
       isShowMenu,
       isMobile,
     };
