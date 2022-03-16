@@ -8,8 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      body: ["Bebas Neue"],
     },
     colors: {
       primary: "#7D5A50",
