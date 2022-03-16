@@ -15,12 +15,12 @@
     </div>
     <div class="block lg:hidden">
       <button
-        class="flex items-center px-3 py-2 border rounded text-quaternary"
+        class="flex items-center px-3 py-2 border rounded text-white"
         @click="isShowMenu = !isShowMenu"
       >
         <svg
           viewBox="0 0 100 80"
-          class="h-3 w-3 text-quaternary"
+          class="h-3 w-3 text-white"
           fill="currentColor"
         >
           <rect width="100" height="15"></rect>
@@ -33,24 +33,24 @@
       v-if="!isShowMenu"
       class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
     >
-      <div class="font-medium lg:flex-grow">
+      <div class="font-medium text-white lg:flex-grow">
         <a
           href="#responsive-header"
-          class="block lg:inline-block mt-4 lg:mt-0 mr:0 lg:mr-4 text-quaternary font-semibold"
+          class="block lg:inline-block mt-4 lg:mt-0 mr:0 lg:mr-4 font-semibold"
         >
-          Docs
+          Home
         </a>
         <a
           href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-quaternary mr-4 font-semibold"
+          class="block mt-4 lg:inline-block lg:mt-0 mr-4 font-semibold"
         >
-          Examples
+          Portfolio
         </a>
         <a
           href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-quaternary font-semibold"
+          class="block mt-4 lg:inline-block lg:mt-0 font-semibold"
         >
-          Blog
+          About
         </a>
       </div>
     </div>
