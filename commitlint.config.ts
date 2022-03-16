@@ -128,7 +128,7 @@ module.exports = {
           "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself",
       },
       issues: {
-        description: 'Add issue references (e.g. "fix #123", "re #123".)',
+        description: "Add issue references (e.g. 'fix #123', 're #123'.)",
       },
     },
   },

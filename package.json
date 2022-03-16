@@ -9,7 +9,10 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.0",

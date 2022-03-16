@@ -8,10 +8,11 @@ export default {
   ],
   theme: {
     colors: {
-      primary: "#533E85",
-      secondary: "#2D31FA",
-      tertiary: "#5D8BF4",
-      quaternary: "#DFF6FF",
+      primary: "#7D5A50",
+      secondary: "#B4846C",
+      tertiary: "#E5B299",
+      quaternary: "#FCDEC0",
+      white: "#ffffff",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
