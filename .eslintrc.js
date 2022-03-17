@@ -19,5 +19,7 @@ module.exports = {
   rules: {
     "vue/multi-word-component-names": 0,
     quotes: ["error", "double"],
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
+  ignorePatterns: ["public/**"],
 };

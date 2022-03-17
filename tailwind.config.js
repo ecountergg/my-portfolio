@@ -7,15 +7,17 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    fontFamily: {
-      body: ["Bebas Neue"],
-    },
-    colors: {
-      primary: "#7D5A50",
-      secondary: "#B4846C",
-      tertiary: "#E5B299",
-      quaternary: "#FCDEC0",
-      white: "#ffffff",
+    extend: {
+      fontFamily: {
+        body: ["Bebas Neue"],
+      },
+      colors: {
+        primary: "#7D5A50",
+        secondary: "#B4846C",
+        tertiary: "#E5B299",
+        quaternary: "#FCDEC0",
+        white: "#ffffff",
+      },
     },
   },
 };
