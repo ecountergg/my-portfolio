@@ -1,3 +1,3 @@
 <template>
-  <div class="p-6">Portfolio</div>
+    <div class="p-6">Portfolio</div>
 </template>

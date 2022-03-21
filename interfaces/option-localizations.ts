@@ -1,5 +1,5 @@
 export interface OptionLocalizations {
-  id: number;
-  value: string;
-  label: string;
+    id: number
+    value: string
+    label: string
 }

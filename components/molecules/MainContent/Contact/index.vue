@@ -1,3 +1,3 @@
 <template>
-  <div class="p-6">Contact</div>
+    <div class="p-6">Contact</div>
 </template>
