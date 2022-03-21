@@ -2,15 +2,17 @@
 import { ID } from "~/consts/localizations/id";
 import { EN } from "~/consts/localizations/en";
 
-export default (_, inject) => {
-  // Inject $hello(msg) in Vue, context and store.
+// Compose
+import { useLocalization } from "~~/composables";
 
+export default (_, inject) => {
   inject("t", (key: string) => {
-    const locale = "id";
-    if (locale === "id") {
+    const { locale } = useLocalization();
+
+    if (locale.value === "id") {
       return ID[key];
     }
-    if (locale === "um") {
+    if (locale.value === "um") {
       return EN[key];
     }
   });

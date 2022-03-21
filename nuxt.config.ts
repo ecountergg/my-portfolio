@@ -35,5 +35,9 @@ export default defineNuxtConfig({
       path: "~/components/molecules/",
       prefix: "M",
     },
+    {
+      path: "~/components/organism/",
+      prefix: "O",
+    },
   ],
 });
