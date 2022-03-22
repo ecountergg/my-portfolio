@@ -1,5 +1,5 @@
 export interface Header {
-  id: number
-  href: string
-  label: string
+  id: number;
+  href: string;
+  label: string;
 }

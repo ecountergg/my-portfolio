@@ -31,46 +31,46 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from "vue"
+import { defineComponent, reactive, computed } from "vue";
 
 // Consts
-import { Localizations } from "~/consts/localizations"
+import { Localizations } from "~/consts/localizations";
 
 // Compose
-import { useLocalization } from "~~/composables"
+import { useLocalization } from "~~/composables";
 
 export default defineComponent({
   name: "OChangeLocale",
   setup() {
-    const { locale, changeLocale } = useLocalization()
+    const { locale, changeLocale } = useLocalization();
     const show = reactive({
       locale: false,
-    })
+    });
 
     // Computeds
     const localizationSelected = computed(() => {
       return Localizations.find(
-        (localization) => localization.value === locale.value
-      )
-    })
+        localization => localization.value === locale.value,
+      );
+    });
     const localizationNotSelected = computed(() => {
       return Localizations.find(
-        (localization) => localization.value !== locale.value
-      )
-    })
+        localization => localization.value !== locale.value,
+      );
+    });
 
     // Methods
     const setChangeLocale = (lang: string) => {
-      changeLocale(lang)
-      show.locale = false
-    }
+      changeLocale(lang);
+      show.locale = false;
+    };
 
     return {
       show,
       localizationSelected,
       localizationNotSelected,
       setChangeLocale,
-    }
+    };
   },
-})
+});
 </script>

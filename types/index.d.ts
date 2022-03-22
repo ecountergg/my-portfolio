@@ -1,1 +1,1 @@
-declare let $t: (msg: string) => string
+declare let $t: (msg: string) => string;

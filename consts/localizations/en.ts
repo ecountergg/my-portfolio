@@ -1,5 +1,5 @@
-import { Localization } from "~/interfaces/localization"
+import { Localization } from "~/interfaces/localization";
 
 export const EN: Localization = {
   test: "Test",
-}
+};

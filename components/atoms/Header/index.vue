@@ -1,6 +1,18 @@
 <template>
   <nav
-    class="static lg:sticky top-0 lg:flex items-center justify-between flex-wrap bg-quaternary py-3 px-6 border-0"
+    class="
+      static
+      lg:sticky
+      top-0
+      items-center
+      justify-between
+      flex-wrap
+      bg-quaternary
+      py-3
+      px-6
+      border-0
+      lg:flex
+    "
   >
     <div class="flex justify-between lg:hidden">
       <img src="/images/eka.jpg" alt="Image - Eka" class="rounded-full w-7" />
@@ -16,7 +28,11 @@
       />
       <div v-once class="flex align-middle justify-between w-full">
         <div
-          class="font-medium text-white lg:text-primary lg:flex lg:gap-4 lg:flex-grow"
+          class="
+            font-medium
+            text-white
+            lg:text-primary lg:flex lg:gap-4 lg:flex-grow
+          "
         >
           <a
             v-for="(header, index) in Headers"
@@ -35,17 +51,17 @@
   </nav>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent } from "vue";
 
 // Consts
-import { Headers } from "~/consts/headers"
+import { Headers } from "~/consts/headers";
 
 export default defineComponent({
   name: "AHeader",
   setup() {
     return {
       Headers,
-    }
+    };
   },
-})
+});
 </script>

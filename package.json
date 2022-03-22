@@ -9,9 +9,11 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "**/*": [
-      "eslint --fix",
-      "prettier --write --ignore-unknown ."
+    "*.(js|ts|html|css|scss|sass)": [
+      "prettier --write"
+    ],
+    "*.(js|ts)": [
+      "eslint --fix"
     ]
   },
   "devDependencies": {
@@ -28,7 +30,7 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.3.5",
     "nuxt3": "latest",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.0"
   },
   "dependencies": {
     "@commitlint/cli": "^16.2.1",

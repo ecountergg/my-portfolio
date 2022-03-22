@@ -1,5 +1,5 @@
 // Interfaces
-import { OptionLocalizations } from "~~/interfaces/option-localizations"
+import { OptionLocalizations } from "~~/interfaces/option-localizations";
 
 export const Localizations: OptionLocalizations[] = [
   {
@@ -12,4 +12,4 @@ export const Localizations: OptionLocalizations[] = [
     value: "um",
     label: "EN",
   },
-]
+];

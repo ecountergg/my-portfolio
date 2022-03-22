@@ -1,5 +1,5 @@
 // Interfaces
-import { Header } from "~/interfaces/header"
+import { Header } from "~/interfaces/header";
 
 export const Headers: Header[] = [
   {
@@ -27,4 +27,4 @@ export const Headers: Header[] = [
     href: "#contact",
     label: "Contact",
   },
-]
+];
