@@ -3,12 +3,12 @@ import { ref } from "vue"
 const locale = ref("um")
 
 export const useLocalization = () => {
-    const changeLocale = (lang: string) => {
-        locale.value = lang
-    }
+  const changeLocale = (lang: string) => {
+    locale.value = lang
+  }
 
-    return {
-        locale,
-        changeLocale,
-    }
+  return {
+    locale,
+    changeLocale,
+  }
 }

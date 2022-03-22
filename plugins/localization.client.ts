@@ -6,14 +6,14 @@ import { EN } from "~/consts/localizations/en"
 import { useLocalization } from "~~/composables"
 
 export default (_, inject) => {
-    inject("t", (key: string) => {
-        const { locale } = useLocalization()
+  inject("t", (key: string) => {
+    const { locale } = useLocalization()
 
-        if (locale.value === "id") {
-            return ID[key]
-        }
-        if (locale.value === "um") {
-            return EN[key]
-        }
-    })
+    if (locale.value === "id") {
+      return ID[key]
+    }
+    if (locale.value === "um") {
+      return EN[key]
+    }
+  })
 }
