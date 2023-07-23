@@ -1,13 +1,10 @@
 <template>
-  <div class="p-6">
-    <ATitle title="Skills" />
-  </div>
+  <MSection id="skills" :title="$t('headers.skills')"> </MSection>
 </template>
-
 <script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "ASkills",
-});
+export default {
+  name: "MSkills",
+  inheritAttrs: false,
+  customOptions: {},
+};
 </script>

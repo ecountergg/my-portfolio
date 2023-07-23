@@ -14,8 +14,8 @@ export const Headers: Header[] = [
   },
   {
     id: 3,
-    href: "#experience",
-    label: "Experience",
+    href: "#experiences",
+    label: "Experiences",
   },
   {
     id: 4,

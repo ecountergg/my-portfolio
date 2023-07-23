@@ -1,0 +1,10 @@
+{
+  "headers": {
+    "contact": "Kontak",
+    "experiences": "Pengalaman",
+    "home": "Beranda",
+    "portfolio": "Portfolio",
+    "skills": "Keterampilan"
+  },
+  "welcome": "Selamat Datang!"
+}

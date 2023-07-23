@@ -1,43 +1,31 @@
-import { defineNuxtConfig } from "nuxt3";
+import { defineNuxtConfig } from "nuxt/config";
+
+import { i18n } from "./configs/i18n.config";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  buildModules: ["@nuxtjs/tailwindcss"],
-  plugins: ["~/plugins/localization.client.ts"],
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
+  plugins: [{ src: "~/plugins/scroll-behavior.ts", mode: "client" }],
+  modules: ["@nuxtjs/i18n"],
+  i18n,
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
-  tailwindcss: {
-    cssPath: "~/assets/css/tailwind.css",
-    configPath: "tailwind.config.js",
-    exposeConfig: false,
-    config: {},
-    injectPosition: 0,
-    viewer: true,
-  },
-  css: ["~/assets/css/tailwind.css"],
-  env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:3000",
-  },
+  css: ["~/assets/css/tailwind.css", "~/assets/scss/main.scss"],
   components: [
     {
-      path: "~/components/atoms/",
+      path: "~/components/Atoms/",
       prefix: "A",
     },
     {
-      path: "~/components/molecules/",
+      path: "~/components/Molecules/",
       prefix: "M",
     },
-    {
-      path: "~/components/organism/",
-      prefix: "O",
-    },
   ],
+  imports: {
+    autoImport: true,
+    dirs: ["composables/**"],
+  },
 });

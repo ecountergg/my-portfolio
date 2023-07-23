@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AHeader />
+    <MHeader />
     <main>
       <MMainContentHome />
       <MMainContentSkills />

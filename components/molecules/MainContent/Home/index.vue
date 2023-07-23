@@ -15,3 +15,10 @@
     </div>
   </section>
 </template>
+<script lang="ts">
+export default {
+  name: "MHome",
+  inheritAttrs: false,
+  customOptions: {},
+};
+</script>

@@ -1,23 +1,11 @@
 <template>
   <nav
-    class="
-      static
-      lg:sticky
-      top-0
-      items-center
-      justify-between
-      flex-wrap
-      bg-quaternary
-      py-3
-      px-6
-      border-0
-      lg:flex
-    "
+    class="static lg:sticky top-0 items-center justify-between flex-wrap bg-quaternary py-3 px-6 border-0 lg:flex"
   >
     <div class="flex justify-between lg:hidden">
       <img src="/images/eka.jpg" alt="Image - Eka" class="rounded-full w-7" />
       <div class="relative w-20 text-right">
-        <OChangeLocale />
+        <AChangeLocale />
       </div>
     </div>
     <div class="hidden lg:flex w-full">
@@ -28,40 +16,32 @@
       />
       <div v-once class="flex align-middle justify-between w-full">
         <div
-          class="
-            font-medium
-            text-white
-            lg:text-primary lg:flex lg:gap-4 lg:flex-grow
-          "
+          class="font-medium text-white lg:text-primary lg:flex lg:gap-4 lg:flex-grow"
         >
           <a
-            v-for="(header, index) in Headers"
+            v-for="(header, index) in headerOptions"
             :key="`header-${index}`"
-            :href="header.href"
+            :href="header.name"
             class="block lg:inline-block font-semibold"
           >
             {{ header.label }}
           </a>
         </div>
         <div class="relative w-20 text-right">
-          <OChangeLocale />
+          <AChangeLocale />
         </div>
       </div>
     </div>
   </nav>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
-
-// Consts
-import { Headers } from "~/consts/headers";
-
-export default defineComponent({
-  name: "AHeader",
-  setup() {
-    return {
-      Headers,
-    };
-  },
-});
+export default {
+  name: "MHeader",
+  inheritAttrs: false,
+  customOptions: {},
+};
+</script>
+<script setup lang="ts">
+// TODO: Fix eslint auto imports
+const { headerOptions } = useOptions();
 </script>
