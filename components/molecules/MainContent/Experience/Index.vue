@@ -5,6 +5,5 @@
 export default {
   name: "MExperience",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>

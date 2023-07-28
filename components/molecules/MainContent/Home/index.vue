@@ -19,6 +19,5 @@
 export default {
   name: "MHome",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>

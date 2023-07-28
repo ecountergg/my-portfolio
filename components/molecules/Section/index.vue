@@ -10,7 +10,6 @@
 export default {
   name: "MSection",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>
 <script setup lang="ts">

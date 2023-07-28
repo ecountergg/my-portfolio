@@ -10,7 +10,6 @@
 export default {
   name: "ATitle",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>
 <script setup lang="ts">

@@ -5,6 +5,5 @@
 export default {
   name: "MSkills",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>

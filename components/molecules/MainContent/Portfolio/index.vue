@@ -5,6 +5,5 @@
 export default {
   name: "MPortfolio",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>

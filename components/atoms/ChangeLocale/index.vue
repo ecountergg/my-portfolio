@@ -38,7 +38,7 @@ export default {
 </script>
 <script setup lang="ts">
 import { LocaleObject } from "#i18n";
-import { useI18n } from "#imports";
+import { useI18n, reactive, computed } from "#imports";
 
 const { locale, locales } = useI18n();
 

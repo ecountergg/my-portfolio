@@ -5,6 +5,5 @@
 export default {
   name: "MContact",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>
