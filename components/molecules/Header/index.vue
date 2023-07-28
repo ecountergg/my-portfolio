@@ -14,7 +14,7 @@
         alt="Image - Eka"
         class="rounded-full w-7 mr-6"
       />
-      <div v-once class="flex align-middle justify-between w-full">
+      <div class="flex align-middle justify-between w-full">
         <div
           class="font-medium text-white lg:text-primary lg:flex lg:gap-4 lg:flex-grow"
         >
@@ -38,10 +38,13 @@
 export default {
   name: "MHeader",
   inheritAttrs: false,
-  customOptions: {},
 };
 </script>
 <script setup lang="ts">
-// TODO: Fix eslint auto imports
+import { useI18n } from "#imports";
+
+import { useOptions } from "~/composables/useOptions";
+const { t } = useI18n();
+
 const { headerOptions } = useOptions();
 </script>
