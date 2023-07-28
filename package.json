@@ -5,14 +5,14 @@
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
     "lint": "eslint --ext .ts,.vue .",
-    "prepare": "husky install | chmod ug+x .husky/*",
+    "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.(js|ts|html|css|scss|sass)": [
+    "*.{js,ts,html,css,scss,sass,vue}": [
       "prettier --write"
     ],
-    "*.(js|ts)": [
+    "*.{js,ts,vue}": [
       "eslint --fix"
     ]
   },

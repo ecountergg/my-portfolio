@@ -41,10 +41,7 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { useI18n } from "#imports";
-
 import { useOptions } from "~/composables/useOptions";
-const { t } = useI18n();
 
 const { headerOptions } = useOptions();
 </script>
