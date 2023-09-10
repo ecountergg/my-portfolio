@@ -1,4 +1,10 @@
 {
+  "companies": {
+    "devixel-desc": "I whipped up apps like an online gadget bazaar (appliance apps) and content control systems to help Appliance Apps dish out info to customers. It was my first time working with folks from different corners of the world, speaking different language. While developing this apps, I cooked up a bunch of modules to handle stuff like customer data, gadget info, real-time sneak peeks, and a whole lot more. 🚀",
+    "holahalo-desc": "This is where my journey as a 'professional' in the field of engineering began. Initially, I applied for a web developer position, which meant mastering backend development. However, over time, I felt that my focus was more suited for learning frontend development 😅. I started learning a lot about programming, especially in the frontend domain, SDLC, and team management. I created an application for the travel agency market aimed at selling holiday packages with various diverse destinations. I received a lot of assistance from senior engineers there in developing the application, but there were also times when I worked on features without the help of others. Some of the features I developed included profile management, shopping carts, mobile web design, product management, travel management, and more.",
+    "nostra-desc": "Here, I'm working with a new vibe, the Work From Anywhere (WFA) culture, but with the same dedication as regular office hours. I've whipped up a few apps, like healthcare services and container tracking. In the healthcare apps, we've built a pon of modules - account management, doctor management, patient management, patient stalking, online health checkups, and more. And then, for the container tracking project, I've cooked up a bunch of modules too - container management, transfer ship, account management, container tracking, ship hopping, order management, shipping instructions, estimated of repair (EOR), seal stock, and the whole shebang. 🚀",
+    "tradaru-desc": "I have created an application similar to a B2B marketplace, along with API services for couriers. Building the B2B marketplace was a new experience for me since it was my first time using Angular, which meant stepping out of my comfort zone and facing the challenge of working with a new JavaScript framework 😅. Building the API services was also a new experience because I was assisting my lead in creating the frontend architecture using Nuxt 3 and Tailwind to simplify the onboarding process for new engineers joining the project."
+  },
   "headers": {
     "contact": "Contact",
     "experiences": "Experiences",
@@ -6,5 +12,14 @@
     "portfolio": "Portfolio",
     "skills": "Skills"
   },
+  "intro": "Hi, I'm Eka Yuda, It's cool to meet you",
+  "intro-desc": "Ever since I embarked on my story as a frontend engineer { year } years ago, I've collaborated with skilled individuals on a diverse range of projects. These have included startups, agencies, and freelance work, all aimed at crafting digital products for both business and consumer needs. I possess a quiet confidence, a natural curiosity, and an ongoing commitment to enhancing my skills by tackling design challenges, one step at a time.",
+  "technology": "Tech Stacks",
+  "type-work": {
+    "contract": "Contract",
+    "full-time": "Full-time",
+    "part-time": "Part-time"
+  },
+  "quote": "Frontend engineers are the artists of the web, painting beautiful user interfaces with code and creativity.",
   "welcome": "Welcome!"
 }

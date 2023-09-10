@@ -3,6 +3,7 @@
     <MHeader />
     <main>
       <MMainContentHome />
+      <MMainContentIntro />
       <MMainContentSkills />
       <MMainContentExperience />
       <MMainContentPortfolio />

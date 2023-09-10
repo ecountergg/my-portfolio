@@ -1,11 +1,11 @@
 <template>
   <section id="home" class="bg-quaternary">
     <div class="p-6">
-      <h1 class="text-2xl font-semibold text-center text-primary mb-4">
-        Software Engineer, Low Profile & Future Father
+      <h1 class="text-3xl font-bold text-center text-primary mb-4">
+        Frontend Engineer, Low Profile & Future Father
       </h1>
       <h2 class="text-xl text-center text-primary mb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, labore.
+        {{ $t("quote") }}
       </h2>
       <img
         src="/images/eka.jpg"

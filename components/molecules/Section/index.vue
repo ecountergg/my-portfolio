@@ -1,7 +1,7 @@
 <template>
   <section :id="id">
-    <div class="p-6">
-      <ATitle :title="title" />
+    <div :class="className">
+      <ATitle v-if="title" :title="title" />
       <slot />
     </div>
   </section>
@@ -15,8 +15,11 @@ export default {
 <script setup lang="ts">
 interface Props {
   id: string;
-  title: string;
+  className?: string;
+  title?: string;
 }
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+  className: "p-6",
+});
 </script>

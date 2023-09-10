@@ -1,9 +1,9 @@
 <template>
   <div class="flex items-center gap-4">
     <div class="bg-primary h-1 w-6 rounded-md"></div>
-    <p class="font-semibold text-primary">
+    <h1 class="text-xl font-bold text-primary">
       {{ title }}
-    </p>
+    </h1>
   </div>
 </template>
 <script lang="ts">

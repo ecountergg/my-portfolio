@@ -1,7 +1,11 @@
 // Interfaces
-import { Header } from "~/interfaces/header";
+export interface Header {
+  id: number;
+  href: string;
+  label: string;
+}
 
-export const Headers: Header[] = [
+export const HEADERS: Header[] = [
   {
     id: 1,
     href: "#home",

@@ -1,5 +1,7 @@
 <template>
-  <MSection id="experiences" :title="$t('headers.experiences')"> </MSection>
+  <MSection id="experiences" :title="$t('headers.experiences')">
+    <MCompanies />
+  </MSection>
 </template>
 <script lang="ts">
 export default {

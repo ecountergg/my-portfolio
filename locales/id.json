@@ -1,4 +1,10 @@
 {
+  "companies": {
+    "devixel-desc": "Saya telah membuat aplikasi seperti pasar barang elektronik (aplikasi perangkat) dan sistem manajemen konten untuk membantu Appliance Apps menyediakan data kepada pelanggan. Ini adalah kali pertama saya bekerja dengan orang-orang dari daerah dan bahasa lain. Dalam mengembangkan aplikasi ini, saya membuat beberapa modul untuk tugas seperti mengelola data pelanggan, data barang elektronik, pembaruan tampilan langsung, dan lainnya.",
+    "holahalo-desc": "Di sinilah awal cerita saya menjadi seorang 'Profesional' Engineer. Awalnya, saya melamar posisi sebagai pengembang web, yang berarti harus menguasai backend. Namun, seiring berjalannya waktu, saya merasa bahwa fokus saya lebih cocok untuk mempelajari frontend 😅. Saya mulai belajar banyak tentang pemrograman, terutama di bidang frontend, SDLC, dan pengelolaan tim. Saya menciptakan sebuah aplikasi untuk pasar agen perjalanan yang bertujuan menjual paket liburan dengan berbagai destinasi yang beragam. Saya mendapatkan banyak bantuan dari senior engineer di sana dalam mengembangkan aplikasi tersebut, tetapi ada juga waktu-waktu di mana saya mengerjakan fitur-fitur tanpa bantuan orang lain. Beberapa fitur yang saya buat meliputi manajemen profil, keranjang, tampilan web untuk perangkat mobile, manajemen produk, manajemen perjalanan, dan sebagainya.",
+    "nostra-desc": "Disini saya kerja budaya baru dengan WFA, namun dengan komitmen yang sama seperti waktu kerja hanya tempat saja yg bisa sesuai keinginan kita. Saya membuat beberapa aplikasi seperti layanan kesehatan dan pelacakan kontainer. Dalam perawatan kesehatan, proyek ini membuat banyak modul seperti manajemen akun, mengelola dokter, mengelola pasien, melacak pasien, pemeriksaan kesehatan online, dll. Dalam proyek pelacakan kontainer, saya membuat banyak modul seperti mengelola kontainer, mengelola kapal, pelayaran, manajemen akun , pelacakan kontainer, transfer kapal, manajemen pesanan, instruksi pengiriman, eor, segel stok, dll.",
+    "tradaru-desc": "Saya telah membuat sebuah aplikasi serupa dengan pasar B2B, beserta layanan API untuk kurir. Membangun pasar B2B merupakan pengalaman baru bagi saya karena ini adalah pertama kalinya saya menggunakan Angular, yang berarti saya harus keluar dari zona nyaman saya dan menghadapi tantangan dengan menggunakan kerangka kerja JavaScript yang baru 😅. Membangun layanan API juga merupakan pengalaman baru karena saya membantu pemimpin saya dalam membuat arsitektur frontend menggunakan Nuxt 3 dan Tailwind untuk menyederhanakan proses adaptasi bagi engineer baru yang bergabung dalam proyek ini."
+  },
   "headers": {
     "contact": "Kontak",
     "experiences": "Pengalaman",
@@ -6,5 +12,15 @@
     "portfolio": "Portfolio",
     "skills": "Keterampilan"
   },
+  "intro": "Hi, Saya {name}, Senang bertemu dengan Anda",
+  "intro-desc": "Sejak saya memulai kisah saya sebagai frontend engineer { tahun } tahun yang lalu, saya telah berkolaborasi dengan individu-individu terampil dalam beragam proyek. Hal ini mencakup startup, agensi, dan pekerja lepas, yang semuanya bertujuan menciptakan produk digital untuk kebutuhan bisnis dan konsumen. Saya memiliki rasa percaya diri yang tenang, rasa ingin tahu yang alami, dan komitmen berkelanjutan untuk meningkatkan keterampilan saya dengan mengatasi tantangan desain, selangkah demi selangkah.",
+  "technology": "Teknologi",
+  "type-work": {
+    "contract": "Kontrak",
+    "freelance": "Freelance",
+    "full-time": "Full-time",
+    "part-time": "Part-time"
+  },
+  "quote": "Frontend adalah seniman web, menciptakan antarmuka pengguna yang indah dengan kode dan kreativitas.",
   "welcome": "Selamat Datang!"
 }
