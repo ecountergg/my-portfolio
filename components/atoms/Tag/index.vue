@@ -1,6 +1,6 @@
 <template>
   <span
-    class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-quaternary text-primary rounded-full"
+    class="text-xs inline-flex items-center font-bold leading-sm px-3 py-1 bg-quaternary text-primary rounded-full"
   >
     <icon v-if="icon" :name="icon" class="mr-2 w-6 h-6" />
     {{ label }}
