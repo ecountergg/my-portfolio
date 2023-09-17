@@ -1,11 +1,11 @@
 <template>
-  <ul class="list-disc pl-8 text-primary mt-4">
+  <ul class="list-disc mt-4">
     <li
       v-for="(company, index) in COMPANIES"
-      class="pl-2 mt-2"
+      class="mt-2"
       :key="`company-${index}`"
     >
-      <h2 class="font-semibold text-lg text-primary">
+      <h2 class="font-semibold text-lg">
         <a :href="company.link ?? '#'" target="_blank">
           {{ company.name }}
         </a>

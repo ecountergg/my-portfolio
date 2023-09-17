@@ -21,8 +21,9 @@
           <a
             v-for="(header, index) in headerOptions"
             :key="`header-${index}`"
-            :href="header.name"
+            role="button"
             class="block lg:inline-block font-semibold"
+            @click="onHandleScrollMenu(header.name)"
           >
             {{ header.label }}
           </a>
@@ -41,7 +42,18 @@ export default {
 };
 </script>
 <script setup lang="ts">
+import { findEl } from "~/utils/dom";
 import { useOptions } from "~/composables/useOptions";
 
 const { headerOptions } = useOptions();
+
+const onHandleScrollMenu = async (id: string) => {
+  const el = await findEl(id);
+
+  if ("scrollBehavior" in document.documentElement.style) {
+    return window.scrollTo({ top: el.offsetTop - 35, behavior: "smooth" });
+  } else {
+    return window.scrollTo(0, el.offsetTop - 35);
+  }
+};
 </script>

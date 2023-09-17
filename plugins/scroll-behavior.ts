@@ -1,25 +1,17 @@
 import { defineNuxtPlugin } from "#app";
 
+import { findEl } from "~/utils/dom";
+
 // TODO: Fix Types
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.$router.options.scrollBehavior = async (to, from, savedPosition) => {
+export default defineNuxtPlugin((nuxtApp: any) => {
+  nuxtApp.$router.options.scrollBehavior = async (
+    to: any,
+    _: any,
+    savedPosition: any,
+  ) => {
     if (savedPosition) {
       return savedPosition;
     }
-
-    const findEl = async (hash, x = 0) => {
-      return (
-        window.document.querySelector(hash) ||
-        new Promise(resolve => {
-          if (x > 0) {
-            return resolve(window.document.querySelector("#_nuxt"));
-          }
-          setTimeout(() => {
-            resolve(findEl(hash, 1));
-          }, 300);
-        })
-      );
-    };
 
     if (to.hash) {
       const el = await findEl(to.hash);
