@@ -1,7 +1,7 @@
 <template>
   <button
     class="flex flex-col justify-center items-center"
-    @click="handleClick"
+    @click="onHandleClick"
   >
     <span
       class="bg-steel-500 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm"
@@ -29,3 +29,18 @@
     </span>
   </button>
 </template>
+<script lang="ts">
+export default {
+  name: "AHamburger",
+  inheritAttrs: false,
+};
+</script>
+<script setup lang="ts">
+import { ref } from "#imports";
+
+const isOpen = ref<boolean>(false);
+
+const onHandleClick = () => {
+  isOpen.value = !isOpen.value;
+};
+</script>
