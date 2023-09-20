@@ -38,7 +38,14 @@ export default defineNuxtConfig({
     },
   },
   plugins: [{ src: "~/plugins/scroll-behavior.ts", mode: "client" }],
-  modules: ["@nuxtjs/i18n", "nuxt-icon"],
+  modules: ["@nuxtjs/supabase", "@nuxtjs/i18n", "nuxt-icon"],
+  supabase: {
+    redirectOptions: {
+      login: "/",
+      callback: "/home",
+      exclude: [],
+    },
+  },
   i18n,
   postcss: {
     plugins: {

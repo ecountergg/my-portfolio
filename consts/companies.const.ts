@@ -1,4 +1,4 @@
-import { Icon } from "~/types/icon";
+import { Icon } from "~/types/icon.types";
 
 export const COMPANY_NAME = {
   NOSTRA: "PT Nostra Solusi Teknologi",

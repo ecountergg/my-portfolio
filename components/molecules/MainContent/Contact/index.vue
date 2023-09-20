@@ -37,5 +37,16 @@ export default {
 };
 </script>
 <script setup lang="ts">
+import { useSupabase } from "@/composables/useSupabase";
 import { CONTACTS } from "~/consts/contacts.const";
+
+const { supabase } = useSupabase();
+
+const onCreateContact = async () => {
+  await supabase.from("contacts").insert({
+    name: "Ecounter Dev",
+    email: "ecounterdev@gmail.com",
+    message: "Testing Compose",
+  });
+};
 </script>
