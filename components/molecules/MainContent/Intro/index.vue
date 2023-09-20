@@ -3,7 +3,7 @@
     <h1 class="text-3xl font-bold text-center text-primary mb-4">
       {{ $t("intro") }}💛
     </h1>
-    <h2 class="text-center text-lg text-primary">
+    <h2 class="text-center text-lg text-secondary">
       {{ $t("intro-desc", { year }) }}
     </h2>
   </MSection>

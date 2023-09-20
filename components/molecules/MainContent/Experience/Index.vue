@@ -1,6 +1,6 @@
 <template>
   <MSection id="experiences" :title="$t('headers.experiences')">
-    <div class="pl-10 text-primary mt-2">
+    <div class="pl-10 text-secondary mt-2">
       {{ $t("experiences-desc") }}
       <MCompanies />
     </div>
