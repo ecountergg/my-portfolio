@@ -42,8 +42,8 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { findEl } from "~/utils/dom";
-import { useOptions } from "~/composables/useOptions";
+import { findEl } from "@/utils/dom";
+import { useOptions } from "@/composables/useOptions";
 
 const { headerOptions } = useOptions();
 

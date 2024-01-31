@@ -38,6 +38,6 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { COMPANIES } from "~/consts/companies.const";
-import { toParamCase } from "~/utils/string";
+import { COMPANIES } from "@/consts/companies.const";
+import { toParamCase } from "@/utils/string";
 </script>

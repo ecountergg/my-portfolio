@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from "#app";
 
-import { findEl } from "~/utils/dom";
+import { findEl } from "@/utils/dom";
 
 // TODO: Fix Types
 export default defineNuxtPlugin((nuxtApp: any) => {

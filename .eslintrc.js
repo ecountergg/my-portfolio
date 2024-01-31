@@ -18,9 +18,15 @@ module.exports = {
   plugins: ["vue", "@typescript-eslint"],
   parser: "vue-eslint-parser",
   rules: {
-    quotes: ["error", "double"],
     "vue/multi-word-component-names": 0,
     "@typescript-eslint/no-explicit-any": ["off"],
   },
-  ignorePatterns: ["public/**"],
+  ignorePatterns: [
+    "node_modules",
+    "public",
+    ".vscode",
+    "*.d.ts",
+    ".output",
+    ".nuxt",
+  ],
 };

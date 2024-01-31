@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AToasts />
     <MHeader />
     <main>
       <MMainContentHome />

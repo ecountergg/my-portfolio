@@ -6,7 +6,9 @@
     "tradaru-desc": "Saya telah membuat sebuah aplikasi serupa dengan pasar B2B, beserta layanan API untuk kurir. Membangun pasar B2B merupakan pengalaman baru bagi saya karena ini adalah pertama kalinya saya menggunakan Angular, yang berarti saya harus keluar dari zona nyaman saya dan menghadapi tantangan dengan menggunakan kerangka kerja JavaScript yang baru 😅. Membangun layanan API juga merupakan pengalaman baru karena saya membantu pemimpin saya dalam membuat arsitektur frontend menggunakan Nuxt 3 dan Tailwind untuk menyederhanakan proses adaptasi bagi engineer baru yang bergabung dalam proyek ini."
   },
   "contact-desc": "Halo, saya adalah penyihir frontend yang mengurus halaman profil ini! 💻🔥 Apakah Anda ingin berhubungan, berbicara tentang keahlian web, atau mendalami beberapa pembicaraan tentang HTML, CSS, dan JavaScript? Bagian 'Kontak' adalah tempat di mana magia dimulai. Jangan ragu-ragu, hubungi saya melalui pesan langsung (DM), kirim pesan, atau sapa saya untuk berbicara tentang kehebatan frontend. Saya siap mendengarkan cerita teknologi dan pencapaian kode Anda, jadi jangan ragu untuk berbicara dan mari bersama-sama menjelajahi dunia pemrograman! 🌊🚀",
+  "email": "Email",
   "experiences-desc": "Selamat datang di zona 'Pengalaman', di sini saya akan berbagi pengalaman saya sebagai seorang ahli frontend! 🚀💻 Di sinilah segala keajaiban terjadi, dari mengubah impian desain menjadi kenyataan web hingga menghadapi berbagai permasalahan di dunia browser dan membuat piksel-piksel menjadi harmonis. Saya telah menjelajahi ombak-ombak kode, mengatasi bug yang rumit, dan membangun kerajaan digital, satu baris kode demi satu baris kode. Mari bergabung dan ikuti petualangan pemrograman saya - ini telah menjadi perjalanan yang luar biasa dengan banyak pencapaian teknologi dan pertempuran hebat di dunia web. Mari kita menjelajahi bersama petualangan digital ini! 🌐🎉",
+  "full-name": "Nama Lengkap",
   "headers": {
     "contact": "Kontak",
     "experiences": "Pengalaman",
@@ -16,6 +18,9 @@
   },
   "intro": "Hi, Saya {name}, Senang bertemu dengan Anda",
   "intro-desc": "Sejak saya memulai kisah saya sebagai frontend engineer { tahun } tahun yang lalu, saya telah berkolaborasi dengan individu-individu terampil dalam beragam proyek. Hal ini mencakup startup, agensi, dan pekerja lepas, yang semuanya bertujuan menciptakan produk digital untuk kebutuhan bisnis dan konsumen. Saya memiliki rasa percaya diri yang tenang, rasa ingin tahu yang alami, dan komitmen berkelanjutan untuk meningkatkan keterampilan saya dengan mengatasi tantangan desain, selangkah demi selangkah.",
+  "input-something": "Masukan {something}",
+  "message": "Pesan",
+  "name": "Nama",
   "technology": "Teknologi",
   "type-work": {
     "contract": "Kontrak",

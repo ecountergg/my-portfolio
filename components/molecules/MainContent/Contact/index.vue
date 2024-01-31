@@ -26,6 +26,27 @@
             </a>
           </div>
         </div>
+        <div class="mb-4 sm:mb-8">
+          <AInput
+            name="name"
+            id="name"
+            :label="t('full-name')"
+            :placeholder="t('full-name')"
+          />
+          <AInput
+            name="email"
+            id="email"
+            :label="t('email')"
+            placeholder="example@mail.com"
+          />
+          <ATextarea
+            name="message"
+            id="message"
+            :label="t('message')"
+            :placeholder="t('message')"
+          />
+          <button @click="onSubmit">Send</button>
+        </div>
       </div>
     </div>
   </MSection>
@@ -37,16 +58,39 @@ export default {
 };
 </script>
 <script setup lang="ts">
+import { computed, unref, object, string, useI18n } from "#imports";
+import { toTypedSchema } from "@vee-validate/yup";
+import { useForm } from "vee-validate";
+
 import { useSupabase } from "@/composables/useSupabase";
-import { CONTACTS } from "~/consts/contacts.const";
+import { CONTACTS } from "@/consts/contacts.const";
+import { useToastStore } from "@/stores/toast";
+import { STATUS } from "~/types/status.types";
 
 const { supabase } = useSupabase();
+const { t } = useI18n();
+const toastStore = useToastStore();
 
-const onCreateContact = async () => {
-  await supabase.from("contacts").insert({
-    name: "Ecounter Dev",
-    email: "ecounterdev@gmail.com",
-    message: "Testing Compose",
+const validationSchema = computed(() =>
+  object({
+    name: string().required().label(t("full-name")),
+    email: string().email().label(t("email")).required().label(t("email")),
+    message: string().notRequired(),
+  }),
+);
+
+const { handleSubmit, resetForm } = useForm({
+  validationSchema: computed(() => toTypedSchema(unref(validationSchema))),
+});
+
+const onSubmit = handleSubmit(async values => {
+  const response = await supabase.from("contacts").insert({
+    name: values.name,
+    email: values.email,
+    message: values.message,
   });
-};
+  if (response.status === 201) {
+    resetForm();
+  }
+});
 </script>

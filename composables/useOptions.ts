@@ -1,4 +1,4 @@
-import { HEADERS } from "~/consts/headers.const";
+import { HEADERS } from "@/consts/headers.const";
 
 export interface Option {
   name: string;

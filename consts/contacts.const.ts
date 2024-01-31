@@ -1,4 +1,3 @@
-// Interfaces
 export interface Contacts {
   id: number;
   title: string;

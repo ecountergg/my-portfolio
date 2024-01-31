@@ -1,4 +1,4 @@
-import { Icon } from "~/types/icon.types";
+import { Icon } from "@/types/icon.types";
 
 export const COMPANY_NAME = {
   NOSTRA: "PT Nostra Solusi Teknologi",
@@ -15,7 +15,6 @@ export const TYPE_WORK = {
 } as const;
 export type TypeWork = (typeof TYPE_WORK)[keyof typeof TYPE_WORK];
 
-// Interfaces
 export interface Company {
   id: number;
   name: CompanyName;

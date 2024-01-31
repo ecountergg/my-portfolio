@@ -1,4 +1,3 @@
-// Interfaces
 export interface Header {
   id: number;
   href: string;

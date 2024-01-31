@@ -46,14 +46,11 @@ const show = reactive({
   locale: false,
 });
 
-// Methods
 const onChangeLocale = (code: string) => {
   locale.value = code;
 
   show.locale = false;
 };
-
-// Computeds
 const localizationSelected = computed(() => {
   return (locales.value as LocaleObject[]).find(
     localization => localization.code === locale.value,

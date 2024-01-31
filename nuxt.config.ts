@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from "nuxt/config";
-
 import { i18n } from "./configs/i18n.config";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
@@ -37,22 +35,6 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
-  plugins: [{ src: "~/plugins/scroll-behavior.ts", mode: "client" }],
-  modules: ["@nuxtjs/supabase", "@nuxtjs/i18n", "nuxt-icon"],
-  supabase: {
-    redirectOptions: {
-      login: "/",
-      callback: "/home",
-      exclude: [],
-    },
-  },
-  i18n,
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
   css: ["~/assets/css/tailwind.css", "~/assets/scss/main.scss"],
   components: [
     {
@@ -65,7 +47,36 @@ export default defineNuxtConfig({
     },
   ],
   imports: {
-    autoImport: true,
     dirs: ["composables/**"],
+  },
+  modules: [
+    "@nuxtjs/supabase",
+    "@nuxtjs/i18n",
+    "nuxt-icon",
+    "@vee-validate/nuxt",
+    "@pinia/nuxt",
+    "~/modules/yup",
+  ],
+  supabase: {
+    redirectOptions: {
+      login: "/",
+      callback: "/home",
+      exclude: [],
+    },
+  },
+  i18n,
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      "defineStore", // import { defineStore } from 'pinia'
+      ["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
+    ],
+  },
+  plugins: [{ src: "~/plugins/scroll-behavior.ts", mode: "client" }],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 });
