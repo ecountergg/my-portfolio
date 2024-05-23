@@ -1,5 +1,5 @@
 <template>
-  <button :class="button({ intent, size })">
+  <button :class="button({ intent, size })" @click="click">
     <slot />
   </button>
 </template>
@@ -11,6 +11,12 @@ export default {
 </script>
 <script setup lang="ts">
 import { cva, type VariantProps } from "class-variance-authority";
+
+type Emits = {
+  (e: "click"): void;
+};
+
+const emits = defineEmits<Emits>();
 
 const button = cva("a-button", {
   variants: {
@@ -33,6 +39,10 @@ withDefaults(defineProps<Props>(), {
   intent: "primary",
   size: "medium",
 });
+
+const click = () => {
+  emits("click");
+};
 </script>
 
 <style lang="scss" scoped>

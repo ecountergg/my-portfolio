@@ -28,5 +28,11 @@
     "part-time": "Part-time"
   },
   "quote": "Frontend engineers are the artists of the web, painting beautiful user interfaces with code and creativity.",
+  "send": "Kirim",
+  "success": "Success",
+  "toast": {
+    "contract-failed-add": "Failed to add to the contract",
+    "contract-success-add": "Successfully added a contract"
+  },
   "welcome": "Welcome!"
 }

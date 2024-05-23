@@ -29,5 +29,11 @@
     "part-time": "Part-time"
   },
   "quote": "Frontend adalah seniman web, menciptakan antarmuka pengguna yang indah dengan kode dan kreativitas.",
+  "send": "Kirim",
+  "success": "Berhasil",
+  "toast": {
+    "contract-failed-add": "Gagal menambah kontrak",
+    "contract-success-add": "Berhasil menambah kontrak"
+  },
   "welcome": "Selamat Datang!"
 }

@@ -24,35 +24,8 @@ export default {
 <script setup lang="ts">
 import { toRef, computed } from "#imports";
 import { useField } from "vee-validate";
-import { cva, type VariantProps } from "class-variance-authority";
 
-const textareaClass = cva("a-textarea", {
-  variants: {
-    intent: {
-      primary: "a-textarea--primary",
-      error: "a-textarea--error",
-    },
-    disabled: {
-      true: "a-textarea--disabled",
-    },
-    size: {
-      small: "a-textarea--small",
-      medium: "a-textarea--medium",
-    },
-  },
-  compoundVariants: [{ intent: "primary", size: "medium", disabled: false }],
-});
-
-type TextareaProps = VariantProps<typeof textareaClass>;
-
-type Props = {
-  id?: string;
-  placeholder?: string;
-  intent?: TextareaProps["intent"];
-  size?: TextareaProps["size"];
-  disabled?: TextareaProps["disabled"];
-  name: string;
-};
+import { type Props, type TextareaProps, textareaClass } from "./props";
 
 const props = withDefaults(defineProps<Props>(), {
   intent: "primary",
@@ -73,8 +46,8 @@ const computedTextareaClass = computed(() => {
 });
 const textareaStatus = computed<TextareaProps["intent"]>(() => {
   if (
-    (!meta.touched && meta.valid && !errorMessage.value) ||
-    (!meta.touched && !meta.valid && !errorMessage.value)
+    (!meta.touched && !meta.valid && !errorMessage.value) ||
+    (!meta.touched && meta.valid && !errorMessage.value)
   )
     return props.intent;
 

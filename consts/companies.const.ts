@@ -65,6 +65,10 @@ export const COMPANIES: Company[] = [
         icon: "simple-icons:nuxtdotjs",
       },
       {
+        label: "React",
+        icon: "simple-icons:react",
+      },
+      {
         label: "Metabase",
         icon: "simple-icons:metabase",
       },

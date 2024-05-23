@@ -25,38 +25,8 @@ export default {
 <script setup lang="ts">
 import { toRef, computed } from "#imports";
 import { useField } from "vee-validate";
-import { cva, type VariantProps } from "class-variance-authority";
-import { InputHTMLAttributes } from "nuxt/dist/app/compat/capi";
 
-const inputClass = cva("a-input", {
-  variants: {
-    intent: {
-      primary: "a-input--primary",
-      secondary: "a-input--secondary",
-      error: "a-input--error",
-    },
-    disabled: {
-      true: "a-input--disabled",
-    },
-    size: {
-      small: "a-input--small",
-      medium: "a-input--medium",
-    },
-  },
-  compoundVariants: [{ intent: "primary", size: "medium", disabled: false }],
-});
-
-type InputProps = VariantProps<typeof inputClass>;
-
-type Props = {
-  id?: string;
-  placeholder?: string;
-  intent?: InputProps["intent"];
-  size?: InputProps["size"];
-  disabled?: InputProps["disabled"];
-  type?: InputHTMLAttributes["type"];
-  name: string;
-};
+import { type Props, type InputProps, inputClass } from "./props";
 
 const props = withDefaults(defineProps<Props>(), {
   intent: "primary",
@@ -77,8 +47,8 @@ const computedInputClass = computed(() => {
 });
 const inputStatus = computed<InputProps["intent"]>(() => {
   if (
-    (!meta.touched && meta.valid && !errorMessage.value) ||
-    (!meta.touched && !meta.valid && !errorMessage.value)
+    (!meta.touched && !meta.valid && !errorMessage.value) ||
+    (!meta.touched && meta.valid && !errorMessage.value)
   )
     return props.intent;
 

@@ -1,6 +1,6 @@
 <template>
-  <label :for="id" :class="label({ intent })">
-    {{ title }}
+  <label :for="id" :class="labelVariant({ intent })">
+    {{ label }}
   </label>
 </template>
 <script lang="ts">
@@ -10,20 +10,7 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { cva, type VariantProps } from "class-variance-authority";
-
-const label = cva("a-label", {
-  variants: {
-    intent: {
-      primary: "a-label--primary",
-      secondary: "a-label--secondary",
-    },
-  },
-  compoundVariants: [{ intent: "primary" }],
-});
-
-type LabelProps = VariantProps<typeof label>;
-type Props = { title: string; id: string; intent?: LabelProps["intent"] };
+import { type Props, labelVariant } from "./props";
 
 withDefaults(defineProps<Props>(), {
   intent: "primary",

@@ -26,26 +26,26 @@
             </a>
           </div>
         </div>
-        <div class="mb-4 sm:mb-8">
-          <AInput
-            name="name"
+        <div class="inline-grid grid-cols-1 gap-y-2 mb-4 sm:mb-0">
+          <MInput
             id="name"
+            name="name"
             :label="t('full-name')"
             :placeholder="t('full-name')"
           />
-          <AInput
-            name="email"
+          <MInput
             id="email"
+            name="email"
             :label="t('email')"
-            placeholder="example@mail.com"
+            :placeholder="t('email')"
           />
-          <ATextarea
-            name="message"
+          <MTextarea
             id="message"
+            name="message"
             :label="t('message')"
             :placeholder="t('message')"
           />
-          <button @click="onSubmit">Send</button>
+          <AButton @click="onSubmit">{{ $t("send") }}</AButton>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@ const validationSchema = computed(() =>
   object({
     name: string().required().label(t("full-name")),
     email: string().email().label(t("email")).required().label(t("email")),
-    message: string().notRequired(),
+    message: string().required().label(t("message")),
   }),
 );
 
@@ -91,6 +91,16 @@ const onSubmit = handleSubmit(async values => {
   });
   if (response.status === 201) {
     resetForm();
+    return toastStore.addToast({
+      title: t("success"),
+      message: t("toast.contract-success-add"),
+      type: STATUS.SUCCESS,
+    });
   }
+  return toastStore.addToast({
+    title: t("success"),
+    message: t("toast.contract-failed-add"),
+    type: STATUS.ERROR,
+  });
 });
 </script>

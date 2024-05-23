@@ -1,6 +1,6 @@
 <template>
   <section :id="id">
-    <div :class="className">
+    <div :class="[className]">
       <ATitle v-if="title" :title="title" />
       <slot />
     </div>
