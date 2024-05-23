@@ -43,6 +43,7 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@pinia/nuxt": "^0.4.11",
     "@vee-validate/nuxt": "^4.11.7",
+    "class-variance-authority": "^0.7.0",
     "pinia": "^2.1.6",
     "vee-validate": "^4.11.7",
     "yup": "^1.2.0"

@@ -1,65 +1,88 @@
 <template>
-  <div class="a-input">
-    <label :for="id" class="a-input__label">
-      {{ label }}
-    </label>
+  <div>
     <input
       v-model="value"
-      type="text"
+      :type="type"
       :name="name"
       :id="id"
       :placeholder="placeholder"
-      class="a-input__input"
-      :class="inputStatus"
+      :class="computedInputClass"
+      :disabled="disabled ?? false"
     />
-    <small v-if="errorMessage" class="a-input__message">
+    <small v-if="!!errorMessage" class="a-input__message">
       {{ errorMessage }}
     </small>
   </div>
 </template>
-<style lang="scss">
-.a-input {
-  @apply mb-3;
 
-  &__label {
-    @apply text-sm text-primary font-semibold;
-  }
-  &__input {
-    @apply mt-2 flex h-12 w-full items-center justify-center rounded-xl bg-white/0 p-3 text-sm outline-none border-2;
-    &--primary {
-      @apply focus:border-primary;
-    }
-    &--error {
-      @apply border-red-500 focus:border-red-500;
-    }
-  }
-  &__message {
-    @apply text-red-500;
-  }
-}
-</style>
 <script lang="ts">
 export default {
   name: "AInput",
   inheritAttrs: false,
 };
 </script>
+
 <script setup lang="ts">
 import { toRef, computed } from "#imports";
 import { useField } from "vee-validate";
+import { cva, type VariantProps } from "class-variance-authority";
+import { InputHTMLAttributes } from "nuxt/dist/app/compat/capi";
+
+const inputClass = cva("a-input", {
+  variants: {
+    intent: {
+      primary: "a-input--primary",
+      secondary: "a-input--secondary",
+      error: "a-input--error",
+    },
+    disabled: {
+      true: "a-input--disabled",
+    },
+    size: {
+      small: "a-input--small",
+      medium: "a-input--medium",
+    },
+  },
+  compoundVariants: [{ intent: "primary", size: "medium", disabled: false }],
+});
+
+type InputProps = VariantProps<typeof inputClass>;
 
 type Props = {
-  name: string;
   id?: string;
-  label?: string;
   placeholder?: string;
+  intent?: InputProps["intent"];
+  size?: InputProps["size"];
+  disabled?: InputProps["disabled"];
+  type?: InputHTMLAttributes["type"];
+  name: string;
 };
 
 const props = withDefaults(defineProps<Props>(), {
+  intent: "primary",
+  size: "medium",
   name: "input",
   id: "input",
-  label: "",
   placeholder: "",
+  disabled: false,
+  type: "text",
+});
+
+const computedInputClass = computed(() => {
+  return inputClass({
+    intent: inputStatus.value,
+    disabled: props.disabled,
+    size: props.size,
+  });
+});
+const inputStatus = computed<InputProps["intent"]>(() => {
+  if (
+    (!meta.touched && meta.valid && !errorMessage.value) ||
+    (!meta.touched && !meta.valid && !errorMessage.value)
+  )
+    return props.intent;
+
+  return "error";
 });
 
 const { errorMessage, meta, value } = useField<string | number>(
@@ -69,14 +92,38 @@ const { errorMessage, meta, value } = useField<string | number>(
     validateOnMount: false,
   },
 );
-
-const inputStatus = computed<string>(() => {
-  if (
-    (meta.valid && !errorMessage.value) ||
-    (!meta.valid && !errorMessage.value)
-  )
-    return "a-input__input--primary";
-
-  return "a-input__input--error";
-});
 </script>
+
+<style lang="scss" scoped>
+.a-input {
+  @apply flex w-full items-center justify-center rounded-xl bg-white text-sm outline-none border-2;
+
+  &--primary {
+    @apply focus:border-primary;
+  }
+
+  &--secondary {
+    @apply focus:border-secondary;
+  }
+
+  &--error {
+    @apply border-red-500 focus:border-red-500;
+  }
+
+  &--disabled {
+    @apply bg-gray-100 cursor-not-allowed;
+  }
+
+  &--small {
+    @apply py-1 px-2;
+  }
+
+  &--medium {
+    @apply py-2 px-3;
+  }
+
+  &__message {
+    @apply text-red-500;
+  }
+}
+</style>

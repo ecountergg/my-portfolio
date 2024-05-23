@@ -1,4 +1,3 @@
-import { log } from 'console';
 <template>
   <div class="a-toast">
     <div class="a-toast__sidebar" :class="toast.type"></div>
@@ -17,7 +16,7 @@ import { log } from 'console';
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .a-toast {
   @apply w-[500px] min-h-[50px] flex flex-row mb-4 p-4 box-border bg-quaternary justify-center rounded-lg shadow;
   &__sidebar {

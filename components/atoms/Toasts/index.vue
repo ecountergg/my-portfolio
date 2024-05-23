@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .a-toasts {
   @apply w-[550px] min-h-[150px] flex flex-col items-center fixed right-0 top-16;
 }
